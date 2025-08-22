@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Interativo da Reunião - ILCODE</title>
+    <link rel="shortcut icon" href="/ILCODE.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .active-tab {
+            background-color: #047857 !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 14px 0 rgba(4, 120, 87, 0.39);
+        }
+    </style>
+
+</head>
+
+<body class="bg-stone-50 text-stone-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+
+        <header class="text-center mb-10">
+            <img src="/ILCODE.png" alt="Logotipo da ILCODE" class="mx-auto mb-4 w-32 h-32 object-contain bg-black rounded-lg p-2">
+            <h1 class="text-3xl md:text-4xl font-bold text-emerald-800">Relatório Interativo da Reunião</h1>
+            <p class="text-stone-500 mt-2">Um resumo dos pontos-chave e decisões da reunião de 21 de Agosto de 2025.</p>
+        </header>
+
+        <main>
+            <section id="details" class="mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200">
+                        <h3 class="font-bold text-lg text-emerald-700 mb-2">Assunto Principal</h3>
+                        <p class="text-stone-600">Responsabilidades do grupo</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200">
+                        <h3 class="font-bold text-lg text-emerald-700 mb-2">Data e Duração</h3>
+                        <p class="text-stone-600">21 á 22 de Agosto de 2025</p>
+                        <p class="text-sm text-stone-500">Das 22:40 às 00:21</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200">
+                        <h3 class="font-bold text-lg text-emerald-700 mb-2">Local</h3>
+                        <p class="text-stone-600">Luanda, Angola (Google Meet)</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attendees" class="mb-12">
+                <h2 class="text-2xl font-bold text-center mb-6 text-emerald-800">Banca Executiva</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md border border-stone-200">
+                    <div class="mb-4">
+                        <h3 class="font-semibold text-emerald-700 border-b pb-2 mb-3">Direção</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><span class="mr-2 text-emerald-600">▪</span><strong>Pascoal Tondo</strong>, CEO</li>
+                            <li class="flex items-center"><span class="mr-2 text-emerald-600">▪</span><strong>Eliana Muabi</strong>, RH</li>
+                            <li class="flex items-center"><span class="mr-2 text-emerald-600">▪</span><strong>Edson Bernardo</strong>, Especialista em Departamento Pessoal</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-emerald-700 border-b pb-2 mb-3">Membros da Equipa Presentes na Reunião</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-stone-600">
+                            <p>Maurício Finda</p>
+                            <p>Weza Neto</p>
+                            <p>Cristiano Jerônimo</p>
+                            <p>Albertina Sauimbo</p>
+                            <p>Adolfo Monteiro</p>
+                            <p>Nyingika Watela</p>
+                            <p>Osvaldo Pascoal</p>
+                            <p>Délcio Raimundo</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="discussion" class="mb-12 text-center">
+                <h2 class="text-2xl font-bold mb-2 text-emerald-800">Pontos Críticos Discutidos</h2>
+                <p class="text-stone-500 mb-6 max-w-2xl mx-auto">A reunião focou-se em desafios internos cruciais para o sucesso da empresa. Clique num tópico para ver os detalhes discutidos.</p>
+                
+                <div id="tabs-container" class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+                    <button data-target="content-communication" class="tab-button bg-white p-4 rounded-lg shadow-md border border-stone-200 font-semibold text-stone-700 hover:bg-emerald-50 transition-colors duration-300 flex flex-col items-center justify-center h-28">
+                        <span class="text-3xl mb-1">🗣️</span>
+                        <span>Comunicação</span>
+                    </button>
+                    <button data-target="content-organization" class="tab-button bg-white p-4 rounded-lg shadow-md border border-stone-200 font-semibold text-stone-700 hover:bg-emerald-50 transition-colors duration-300 flex flex-col items-center justify-center h-28">
+                        <span class="text-3xl mb-1">📂</span>
+                        <span>Organização</span>
+                    </button>
+                    <button data-target="content-finance" class="tab-button bg-white p-4 rounded-lg shadow-md border border-stone-200 font-semibold text-stone-700 hover:bg-emerald-50 transition-colors duration-300 flex flex-col items-center justify-center h-28">
+                        <span class="text-3xl mb-1">💰</span>
+                        <span>Finanças</span>
+                    </button>
+                    <button data-target="content-projects" class="tab-button bg-white p-4 rounded-lg shadow-md border border-stone-200 font-semibold text-stone-700 hover:bg-emerald-50 transition-colors duration-300 flex flex-col items-center justify-center h-28">
+                        <span class="text-3xl mb-1">🚀</span>
+                        <span>Projetos</span>
+                    </button>
+                </div>
+
+                <div id="tabs-content" class="bg-white p-6 rounded-lg shadow-lg border border-stone-200 text-left min-h-[150px] flex items-center justify-center">
+                    <div id="content-placeholder" class="text-stone-500">Selecione um tópico acima para ver os detalhes.</div>
+                    
+                    <div id="content-communication" class="tab-content hidden">
+                        <h3 class="font-bold text-lg text-emerald-700 mb-2">Comunicação e Engajamento</h3>
+                        <p class="text-stone-600">Foi discutida a falta de comunicação no grupo por certos membros e a aparente falta de interesse dos mesmos. Abordou-se também a necessidade de uma gestão mais adequada do nosso tempo como pessoas singulares para um melhor aproveitamento coletivo.</p>
+                    </div>
+                    <div id="content-organization" class="tab-content hidden">
+                        <h3 class="font-bold text-lg text-emerald-700 mb-2">Organização Interna</h3>
+                        <p class="text-stone-600">Foi levantada a necessidade de melhorar a organização interna da empresa, com um foco particular na organização dos documentos essenciais para a legalização da empresa, um passo crítico para a sua formalização.</p>
+                        <p>Onde constam na lista do <strong>CFO</strong> Délcio Raimundo, que tem membros á falta no pagamento dos valores necessários para a concretização do mesmo acto.</p>
+                    </div>
+                    <div id="content-finance" class="tab-content hidden">
+                        <h3 class="font-bold text-lg text-emerald-700 mb-2">Assuntos Financeiros</h3>
+                        <p class="text-stone-600">Mencionou-se a pendência na entrega de valores monetários por parte de alguns membros, um ponto crucial para a legalização da empresa.</p>
+                    </div>
+                    <div id="content-projects" class="tab-content hidden">
+                        <h3 class="font-bold text-lg text-emerald-700 mb-2">Projetos Imediatos</h3>
+                        <p class="text-stone-600">Foi reforçada a urgência na concretização de alguns trabalhos e projetos que são considerados de execução imediata, vitais para o progresso e demonstração de capacidade da empresa.</p>
+                        <p class="text-stone-600">Para mais detalhes, aguardamos pelo pronunciamento do <strong>Gerente de Conta a Pagar/Receber</strong>, Weza Neto.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="conclusion" class="text-center bg-emerald-800 text-white p-8 rounded-lg shadow-2xl">
+                <h2 class="text-2xl font-bold mb-4">A Mensagem Final: O Compromisso é o Pilar</h2>
+                <div class="max-w-2xl mx-auto text-emerald-50">
+                    <p class="mb-4 text-lg italic">"O sucesso é como um prédio. Tem pilares abaixo que precisam estar extremamente sólidos, para a não queda do mesmo."</p>
+                    <p class="font-semibold">Se não nos comprometermos de facto com a causa desta empresa, melhor nos afastarmos. Para não fazer o prédio desmoronar por completo.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-10 pt-6 border-t border-stone-200">
+            <p class="text-sm text-stone-500">Acta redigida por Albertina Txela Joaquina Sauimbo, CMO</p>
+            <p class="text-xs text-stone-400 mt-1">ILCODE © 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-button');
+            const contents = document.querySelectorAll('.tab-content');
+            const placeholder = document.getElementById('content-placeholder');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const targetId = tab.dataset.target;
+                    const targetContent = document.getElementById(targetId);
+
+                    tabs.forEach(t => t.classList.remove('active-tab'));
+                    tab.classList.add('active-tab');
+
+                    contents.forEach(content => {
+                        content.classList.add('hidden');
+                    });
+                    
+                    if (placeholder) {
+                        placeholder.classList.add('hidden');
+                    }
+
+                    if (targetContent) {
+                        targetContent.classList.remove('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
